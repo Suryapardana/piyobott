@@ -41,8 +41,8 @@ module.exports = {
 			}
 			let str =
 				`Hello, ${pushName === undefined ? sender.split("@")[0] : pushName}\n*Here My Command List*\n\n` +
-				` *${botName}* \n` +
-				" *DONATE* ❩\n Dana, Gopay : 087891518799";
+				` *${botName}* \n\n` +
+				" *DONATE* \n Dana, Gopay : 087891518799";
 			const keys = Object.keys(category);
 			for (const key of keys) {
 				str += ` *${key.toUpperCase()}* ❩\n\`\`\`${category[key]
@@ -51,7 +51,7 @@ module.exports = {
 							` ${idx + 1}. ${cmd.name}${cmd.limit ? ` (${cmd.consume || 1} limit)` : ""}${
 								cmd.premium ? ` (Premium Only)` : ""
 							}`
-					)
+					
 					.join("\n")}\`\`\`\n`;
 			}
 			str += `send ${prefix}help followed by a command name to get detail of command, e.g. ${prefix}help sticker`;
